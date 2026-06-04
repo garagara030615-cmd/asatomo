@@ -139,26 +139,26 @@ body{
 /* ── HEADER ── */
 header{
   position:sticky;top:0;z-index:400;
-  background:rgba(250,247,242,.95);
+  background:rgba(250,247,242,0.98);
   backdrop-filter:blur(8px);
   border-bottom:1px solid var(--beige);
-  padding:14px 22px;
+  padding:10px 16px;
   display:flex;align-items:center;justify-content:space-between;
 }
 .header-logo{
-  display:flex;align-items:center;gap:12px;
+  display:flex;align-items:center;gap:8px;
 }
 .header-logo img{
-  height:44px;width:auto;object-fit:contain;
+  height:32px;width:auto;object-fit:contain;
 }
 .header-logo-text{
   font-family:'Shippori Mincho B1',serif;
-  font-size:15px;font-weight:600;
+  font-size:13px;font-weight:600;
   color:var(--deep);letter-spacing:.06em;
-  line-height:1.45;
+  line-height:1.2;
 }
 .header-logo-text small{
-  display:block;font-size:11px;font-weight:400;
+  display:block;font-size:9px;font-weight:400;
   color:var(--text-soft);letter-spacing:.1em;
 }
 .header-tel{
@@ -166,8 +166,8 @@ header{
   text-decoration:none;
   background:var(--tel);
   color:#fff;
-  padding:11px 16px;border-radius:4px;
-  font-size:13px;font-weight:500;letter-spacing:.04em;
+  padding:8px 12px;border-radius:4px;
+  font-size:12px;font-weight:500;letter-spacing:.04em;
   white-space:nowrap;
   min-height:48px; /* タップしやすいサイズ */
 }
@@ -781,6 +781,12 @@ footer p{
   font-size:16px;color:var(--text-mid);
   line-height:2;margin-bottom:0;
 }
+  @media (min-width: 768px) {
+    .pc-only { display: inline; }
+  }
+  @media (max-width: 767px) {
+    .pc-only { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -811,7 +817,7 @@ footer p{
 <!-- ── HEADER ── -->
 <header>
   <div class="header-logo">
-    <img src="asatomo1.jpg" alt="Asatomo ロゴ">
+    <img src="asatomo1.jpg" alt="Asatomo">
     <div class="header-logo-text">
       Asatomo
      <span style="font-size: 32px; font-weight: bold;">あさとも整体院</span>
