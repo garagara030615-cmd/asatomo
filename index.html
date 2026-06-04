@@ -3,281 +3,1274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>整体院 Asatomo｜鹿屋で25年</title>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>Asatomo（あさとも）整体院 | 鹿児島県鹿屋市</title>
+<meta name="description" content="25年、鹿屋の皆様と歩んできた整体院。体の重さ・肩こり・腰痛など、まずはゆっくりお話を聞かせてください。完全予約制・無理な勧誘一切なし。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600&family=Shippori+Mincho+B1:wght@400;500;600;800&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
 <style>
-:root {
-  --ivory: #f9f5f0;
-  --beige: #f0e8dc;
-  --brown: #5c3d2e;
-  --brown-dark: #3d2416;
-  --brown-mid: #8b6450;
-  --brown-light: #c4a882;
-  --text: #3a2e28;
-  --text-light: #7a6a60;
-  --white: #ffffff;
+/* ── RESET & BASE ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:     #FAF7F2;
+  --cream:     #F3EDE2;
+  --beige:     #E5D9C8;
+  --sand:      #CFC0A9;
+  --taupe:     #B09880;
+  --earth:     #8B7260;
+  --deep:      #5C4A38;
+  --bark:      #3A2E24;
+  --warm-wh:   #FDFBF8;
+  --text:      #2E2419;
+  --text-mid:  #6B5A48;
+  --text-soft: #9B8878;
+  --gold:      #C4A668;
+  --gold-lt:   #DCC898;
+  --green:     #7A9A7A;   /* 生命感のある落ち着いたグリーン */
+  --tel:       #2E5FA3;
+  --line:      #06C755;
+  --line-dk:   #059A42;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--ivory); color: var(--text); font-family: 'Shippori Mincho', serif; line-height: 1.8; overflow-x: hidden; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: flex-end; padding: 18px 48px; background: rgba(249,245,240,0.92); backdrop-filter: blur(8px); border-bottom: 0.5px solid rgba(196,168,130,0.2); }
-.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-.nav-links a { font-size: 14px; color: var(--text-light); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
-.nav-links a:hover { color: var(--brown); }
-.btn-reserve { background: var(--brown-dark); color: var(--white) !important; padding: 10px 22px; border-radius: 6px; font-size: 13px !important; }
-.btn-reserve:hover { background: var(--brown) !important; }
 
-/* hero背景設定：asatomo1.jpgを適用 */
-.hero { 
-  min-height: 100vh; 
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  align-items: center; 
-  padding: 120px 48px 60px; 
-  gap: 60px; 
-  background-image: url('asatomo1.jpg'); 
-  background-size: cover; 
-  background-position: center; 
-  position: relative; 
+html{scroll-behavior:smooth}
+body{
+  font-family:'Noto Serif JP',serif;
+  background:var(--ivory);color:var(--text);
+  line-height:2;
+  -webkit-font-smoothing:antialiased;
+  font-size:18px; /* 50-60代向け基本サイズ大きめ */
 }
-.hero::before { content: ""; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(249,245,240,0.7); pointer-events: none; }
-.hero-left, .hero-right { position: relative; z-index: 1; }
 
-.hero-left { max-width: 480px; }
-.hero-catch { font-size: clamp(32px, 4vw, 52px); font-weight: 700; line-height: 1.5; color: var(--brown-dark); letter-spacing: 0.02em; margin-bottom: 28px; }
-.hero-right { display: flex; flex-direction: column; gap: 24px; }
-.hero-sub { font-size: 16px; color: var(--brown-dark); font-weight: bold; line-height: 2; }
-.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-.btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border: 1px solid var(--brown-dark); border-radius: 40px; font-size: 14px; color: var(--brown-dark); text-decoration: none; font-family: 'Shippori Mincho', serif; letter-spacing: 0.05em; transition: all 0.25s; cursor: pointer; background: rgba(255,255,255,0.6); }
-.btn-outline:hover { background: var(--brown-dark); color: var(--white); border-color: var(--brown-dark); }
-.btn-fill { background: var(--brown-dark); color: var(--white); border-color: var(--brown-dark); }
-.btn-fill:hover { background: var(--brown); border-color: var(--brown); }
-.hero-note { font-size: 12px; color: var(--brown-dark); display: flex; align-items: center; gap: 6px; }
+/* ── UTILITY ── */
+.mincho{font-family:'Shippori Mincho B1',serif}
+.cormorant{font-family:'Cormorant Garamond',serif}
+.center{text-align:center}
+.inner{max-width:640px;margin:0 auto;padding:0 22px}
 
-section { padding: 100px 48px; }
-.section-label { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-.section-label-sub { font-family: 'EB Garamond', serif; font-size: 11px; letter-spacing: 0.2em; color: var(--brown-light); }
-.section-title { font-size: clamp(24px, 3vw, 38px); font-weight: 700; color: var(--brown-dark); letter-spacing: 0.02em; margin-bottom: 56px; }
-.reasons { background: var(--beige); }
-.reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.reason-card { background: var(--white); border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-.reason-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(92,61,46,0.12); }
-.reason-card-img { width: 100%; height: 220px; position: relative; }
-.reason-card-img img { width: 100%; height: 100%; object-fit: cover; }
-.reason-badge { position: absolute; top: 14px; left: 14px; font-family: 'EB Garamond', serif; font-size: 11px; letter-spacing: 0.15em; color: var(--white); background: rgba(61,36,22,0.7); padding: 4px 12px; border-radius: 2px; }
-.reason-body { padding: 24px; }
-.reason-title { font-size: 20px; font-weight: 700; color: var(--brown-dark); margin-bottom: 6px; }
-.reason-sub { font-size: 12px; color: var(--brown-light); margin-bottom: 14px; }
-.reason-desc { font-size: 13px; color: var(--text-light); line-height: 2; }
-.reason-card.featured .reason-body { background: var(--brown-dark); }
-.reason-card.featured .reason-title, .reason-card.featured .reason-desc { color: var(--white); }
-.reason-card.featured .reason-sub { color: var(--brown-light); }
-.menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
-.menu-card { background: var(--white); border-radius: 8px; overflow: hidden; border: 0.5px solid rgba(196,168,130,0.3); transition: transform 0.3s; }
-.menu-card:hover { transform: translateY(-3px); }
-.menu-card-body { padding: 20px; }
-.menu-tags { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
-.menu-tag { font-size: 11px; padding: 3px 10px; background: var(--beige); color: var(--brown-mid); border-radius: 20px; }
-.menu-title { font-size: 18px; font-weight: 700; color: var(--brown-dark); margin-bottom: 8px; }
-.menu-desc { font-size: 13px; color: var(--text-light); line-height: 1.9; }
-.payment-box { background: var(--beige); border-radius: 8px; padding: 24px 28px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-light); }
-.story { background: var(--brown-dark); color: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 48px; }
-.story-title { font-size: clamp(24px, 3vw, 36px); font-weight: 700; margin-bottom: 24px; color: var(--white); }
-.story-desc { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 2.2; margin-bottom: 40px; }
-.story-num { font-family: 'EB Garamond', serif; font-size: 96px; color: rgba(255,255,255,0.15); line-height: 1; margin-bottom: 8px; }
-.story-num-label { font-size: 14px; color: var(--brown-light); letter-spacing: 0.1em; margin-bottom: 32px; }
-.insta { background: var(--ivory); text-align: center; }
-.insta .section-label { justify-content: center; }
-.insta .section-title { text-align: center; }
-.insta-desc { font-size: 14px; color: var(--text-light); margin: -36px auto 48px; max-width: 480px; line-height: 2; }
-.insta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 36px; }
-.insta-item { aspect-ratio: 1; border-radius: 4px; overflow: hidden; }
-.insta-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-.insta-item:hover img { transform: scale(1.05); }
-.access { background: var(--beige); }
-.access-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-.access-info { display: flex; flex-direction: column; gap: 20px; }
-.access-info h3 { font-size: 18px; font-weight: 700; color: var(--brown-dark); margin-bottom: 4px; }
-.access-info p { font-size: 14px; color: var(--text-light); line-height: 2; }
-.map-wrap { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(92,61,46,0.1); }
-.map-wrap iframe { display: block; width: 100%; height: 360px; }
-footer { background: var(--brown-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 48px; font-size: 13px; letter-spacing: 0.08em; }
-.footer-logo { font-size: 22px; color: var(--white); margin-bottom: 16px; display: block; }
-.footer-links { display: flex; justify-content: center; gap: 24px; margin: 16px 0; }
-.footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 0.2s; }
-.footer-links a:hover { color: var(--white); }
-.fade { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
-.fade.visible { opacity: 1; transform: translateY(0); }
-@media (max-width: 768px) {
-  nav { padding: 14px 20px; }
-  .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; gap: 40px; }
-  section { padding: 60px 20px; }
-  .reasons-grid, .menu-grid { grid-template-columns: 1fr; }
-  .insta-grid { grid-template-columns: repeat(3, 1fr); }
-  .story { grid-template-columns: 1fr; padding: 60px 20px; gap: 40px; }
-  .story-num { font-size: 64px; }
-  .access-inner { grid-template-columns: 1fr; }
-  .map-wrap iframe { height: 280px; }
+/* 和の区切り線 */
+.wa-rule{
+  display:flex;align-items:center;gap:14px;
+  margin:28px 0;
+}
+.wa-rule::before,.wa-rule::after{
+  content:'';flex:1;height:1px;background:var(--beige);
+}
+.wa-rule-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold);flex-shrink:0;
+}
+
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;letter-spacing:.3em;
+  color:var(--taupe);text-transform:uppercase;
+  display:block;margin-bottom:14px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}
+@keyframes shimmer{0%,100%{opacity:.6}50%{opacity:1}}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ── FIXED FOOTER BUTTONS ── */
+.fixed-btns{
+  position:fixed;bottom:0;left:0;right:0;z-index:500;
+  display:grid;grid-template-columns:1fr 1fr;
+  box-shadow:0 -4px 28px rgba(0,0,0,.22);
+  border-top:2px solid rgba(255,255,255,.08);
+}
+.fixed-tel{
+  background:var(--tel);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 10px 20px;
+  text-decoration:none;
+  transition:background .2s,transform .1s;
+  position:relative;
+  overflow:hidden;
+}
+.fixed-tel::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(255,255,255,.06), transparent);
+  pointer-events:none;
+}
+.fixed-tel:hover,.fixed-tel:active{background:#1e4a8a;transform:scale(.99)}
+.fixed-line{
+  background:var(--line);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 10px 20px;
+  text-decoration:none;
+  transition:background .2s,transform .1s;
+  position:relative;
+  overflow:hidden;
+}
+.fixed-line::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(255,255,255,.06), transparent);
+  pointer-events:none;
+}
+.fixed-line:hover,.fixed-line:active{background:var(--line-dk);transform:scale(.99)}
+.fixed-btn-top{
+  font-size:10px;font-weight:700;letter-spacing:.14em;
+  color:rgba(255,255,255,.7);
+  display:block;margin-bottom:3px;
+  text-transform:uppercase;
+  font-family:'Noto Serif JP',serif;
+}
+.fixed-btn-main{
+  font-family:'Noto Serif JP',serif;
+  font-size:16px;font-weight:700;
+  color:#fff;letter-spacing:.05em;
+  display:block;line-height:1.2;
+}
+.fixed-btn-sub{
+  font-size:11px;font-weight:300;
+  color:rgba(255,255,255,.72);
+  display:block;margin-top:3px;
+  letter-spacing:.03em;
+}
+.fixed-icon{width:26px;height:26px;flex-shrink:0}
+
+/* ── HEADER ── */
+header{
+  position:sticky;top:0;z-index:400;
+  background:rgba(250,247,242,.95);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--beige);
+  padding:14px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.header-logo{
+  display:flex;align-items:center;gap:12px;
+}
+.header-logo img{
+  height:44px;width:auto;object-fit:contain;
+}
+.header-logo-text{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:15px;font-weight:600;
+  color:var(--deep);letter-spacing:.06em;
+  line-height:1.45;
+}
+.header-logo-text small{
+  display:block;font-size:11px;font-weight:400;
+  color:var(--text-soft);letter-spacing:.1em;
+}
+.header-tel{
+  display:flex;align-items:center;gap:7px;
+  text-decoration:none;
+  background:var(--tel);
+  color:#fff;
+  padding:11px 16px;border-radius:4px;
+  font-size:13px;font-weight:500;letter-spacing:.04em;
+  white-space:nowrap;
+  min-height:48px; /* タップしやすいサイズ */
+}
+
+/* ── HERO ── */
+#hero{
+  position:relative;overflow:hidden;
+  min-height:92svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding-bottom:64px;
+}
+
+/* 和モダン背景 — 写真なしのCSSのみで構成 */
+.hero-bg{
+  position:absolute;inset:0;
+  /* ベースは深い木肌色〜墨色のグラデーション */
+  background:
+    linear-gradient(
+      160deg,
+      #2A2018 0%,
+      #3A2E20 40%,
+      #2C2216 70%,
+      #1E1810 100%
+    );
+}
+
+/* 和紙の繊維感をSVGノイズで表現 */
+.hero-bg::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity:.35;
+}
+
+/* 金の光 — 右上からの光源 */
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 85% 10%, rgba(196,166,104,.16) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 60% at 10% 90%, rgba(140,110,70,.10) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 30% at 50% 50%, rgba(255,240,200,.03) 0%, transparent 70%);
+}
+
+/* 和紙テクスチャ風オーバーレイ */
+.hero-texture{
+  position:absolute;inset:0;pointer-events:none;
+  z-index:1;
+}
+
+/* 青海波（円弧）パターン — CSSのみで和の幾何学模様 */
+.hero-seigaiha{
+  position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;
+}
+.hero-seigaiha::before{
+  content:'';position:absolute;
+  right:-60px;top:-60px;
+  width:340px;height:340px;
+  border-radius:50%;
+  border:1px solid rgba(196,166,104,.07);
+}
+.hero-seigaiha::after{
+  content:'';position:absolute;
+  right:20px;top:20px;
+  width:220px;height:220px;
+  border-radius:50%;
+  border:1px solid rgba(196,166,104,.06);
+}
+
+/* 縦ストライプ（木目・竹節のイメージ） */
+.hero-lines{
+  position:absolute;inset:0;pointer-events:none;z-index:1;
+  background-image:repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 79px,
+    rgba(196,166,104,.025) 79px,
+    rgba(196,166,104,.025) 80px
+  );
+}
+
+/* 下部グラデーション（テキストの可読性確保） */
+.hero-vignette{
+  position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 35%,
+    rgba(15,10,5,.55) 70%,
+    rgba(10,7,3,.75) 100%
+  );
+}
+
+/* 金の横線アクセント（下部） */
+.hero-gold-line{
+  position:absolute;bottom:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg, transparent, rgba(196,166,104,.4), rgba(196,166,104,.6), rgba(196,166,104,.4), transparent);
+  z-index:2;
+}
+
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:640px;margin:0 auto;padding:0 26px;
+}
+
+/* 竹みたいな縦線アクセント */
+.hero-accent-line{
+  display:block;width:1px;height:60px;
+  background:linear-gradient(to bottom,transparent,var(--gold-lt),transparent);
+  margin:0 auto 20px;
+  opacity:0;animation:fadeIn 1.2s ease .4s forwards;
+}
+
+.hero-main{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:clamp(22px,5.5vw,32px);
+  font-weight:600;line-height:1.7;
+  color:#fff;
+  margin-bottom:20px;
+  text-shadow:0 2px 12px rgba(0,0,0,.3);
+  opacity:0;animation:fadeUp 1.2s ease .6s forwards;
+}
+.hero-main em{
+  font-style:normal;
+  color:var(--gold-lt);
+}
+
+.hero-sub{
+  font-size:15px;font-weight:300;
+  color:rgba(255,255,255,.82);
+  line-height:2;margin-bottom:36px;
+  text-shadow:0 1px 6px rgba(0,0,0,.25);
+  opacity:0;animation:fadeUp 1.2s ease .85s forwards;
+}
+
+.hero-cta-wrap{
+  display:flex;flex-direction:column;gap:14px;
+  opacity:0;animation:fadeUp 1.2s ease 1.05s forwards;
+}
+.hero-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:20px 28px;border-radius:4px;
+  font-family:'Noto Serif JP',serif;
+  font-size:17px;font-weight:500;letter-spacing:.06em;
+  text-decoration:none;
+  min-height:64px; /* 指で押しやすいサイズ */
+  transition:transform .2s,box-shadow .2s;
+}
+.hero-btn:active{transform:scale(.98)}
+.hero-btn-tel{
+  background:var(--tel);color:#fff;
+  box-shadow:0 6px 24px rgba(46,95,163,.35);
+}
+.hero-btn-line{
+  background:var(--line);color:#fff;
+  box-shadow:0 6px 24px rgba(6,199,85,.3);
+}
+.hero-btn svg{width:24px;height:24px;flex-shrink:0}
+.hero-trust{
+  text-align:center;margin-top:6px;
+  font-size:13px;color:rgba(255,255,255,.55);
+  letter-spacing:.06em;
+}
+
+/* ── INTRO ── */
+#intro{
+  background:var(--warm-wh);
+  padding:72px 22px 64px;
+  position:relative;
+}
+/* 和の装飾：上部に細い金線 */
+#intro::before{
+  content:'';display:block;
+  width:40px;height:2px;
+  background:var(--gold);
+  margin:0 auto 48px;
+}
+
+.intro-h{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:clamp(20px,5vw,26px);
+  font-weight:600;line-height:1.8;
+  color:var(--deep);
+  margin-bottom:24px;
+}
+.intro-p{
+  font-size:17px;line-height:2.15;
+  color:var(--text-mid);
+  margin-bottom:18px;
+}
+.intro-note{
+  background:var(--cream);
+  border-left:3px solid var(--gold);
+  border-radius:0 4px 4px 0;
+  padding:18px 20px;
+  font-size:15px;line-height:2;
+  color:var(--text-mid);
+  margin-top:28px;
+}
+
+/* ── PHOTO ROW (院内) ── */
+.photo-strip{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3px;
+}
+.photo-strip-item{
+  aspect-ratio:3/4;overflow:hidden;
+}
+.photo-strip-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease;
+}
+.photo-strip-item:hover img{transform:scale(1.04)}
+.photo-full{
+  width:100%;aspect-ratio:16/9;overflow:hidden;
+}
+.photo-full img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+
+/* ── CONCERNS ── */
+#concerns{
+  background:var(--cream);
+  padding:72px 22px;
+}
+.concern-list{
+  display:flex;flex-direction:column;gap:2px;
+  margin-top:32px;
+}
+.concern-item{
+  background:var(--warm-wh);
+  padding:24px 22px;
+  display:flex;gap:18px;align-items:flex-start;
+  transition:background .3s;
+  border-left:3px solid transparent;
+}
+.concern-item:hover{
+  background:#fff;
+  border-left-color:var(--gold);
+}
+.concern-icon{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--beige);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.concern-body h3{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:17px;font-weight:600;
+  color:var(--deep);margin-bottom:6px;
+}
+.concern-body p{
+  font-size:15px;color:var(--text-mid);line-height:1.85;
+}
+
+.concern-note{
+  margin-top:32px;
+  background:var(--deep);
+  border-radius:6px;padding:26px 22px;text-align:center;
+}
+.concern-note p{
+  font-size:16px;color:rgba(255,255,255,.85);
+  line-height:2;
+}
+.concern-note strong{color:var(--gold-lt)}
+
+/* ── WHY ── */
+#why{
+  background:var(--warm-wh);
+  padding:72px 22px;
+}
+.why-feature{
+  display:flex;flex-direction:column;gap:2px;
+  margin-top:32px;
+}
+.why-item{
+  padding:28px 22px;
+  background:var(--ivory);
+  border-radius:0;
+  position:relative;
+  margin-bottom:14px;
+}
+.why-item::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+.why-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;color:var(--beige);
+  line-height:1;margin-bottom:10px;font-style:italic;
+}
+.why-h{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:18px;font-weight:600;
+  color:var(--deep);margin-bottom:10px;line-height:1.5;
+}
+.why-p{
+  font-size:16px;color:var(--text-mid);line-height:2;
+}
+
+/* ── PRICE ── */
+#price{
+  background:var(--cream);
+  padding:72px 22px;
+}
+.price-hero-img{
+  width:100%;aspect-ratio:16/9;
+  overflow:hidden;border-radius:6px;
+  margin-bottom:36px;
+}
+.price-hero-img img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+
+.price-list{
+  display:flex;flex-direction:column;gap:14px;
+  margin-top:28px;
+}
+.price-card{
+  background:var(--warm-wh);
+  border-radius:4px;
+  padding:24px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;
+  border-bottom:1px solid var(--beige);
+}
+.price-name{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:17px;font-weight:600;color:var(--deep);
+  margin-bottom:5px;
+}
+.price-desc{
+  font-size:13px;color:var(--text-soft);line-height:1.7;
+}
+.price-amount{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;color:var(--earth);
+  white-space:nowrap;text-align:right;
+  flex-shrink:0;
+}
+.price-amount small{font-size:13px;color:var(--text-soft)}
+.price-note{
+  font-size:14px;color:var(--text-soft);
+  text-align:center;margin-top:16px;line-height:1.8;
+}
+
+/* ── VOICE ── */
+#voice{
+  background:var(--warm-wh);
+  padding:72px 22px;
+}
+.voice-cards{
+  display:flex;flex-direction:column;gap:20px;
+  margin-top:32px;
+}
+.voice-card{
+  background:var(--cream);
+  border-radius:4px;padding:26px 22px;
+  position:relative;
+}
+.voice-card::before{
+  content:'\201C';
+  font-family:'Cormorant Garamond',serif;
+  font-size:56px;color:var(--gold);opacity:.4;
+  position:absolute;top:8px;left:16px;line-height:1;
+}
+.voice-text{
+  font-size:16px;color:var(--text);
+  line-height:2.1;padding-top:18px;
+  margin-bottom:14px;
+}
+.voice-meta{
+  font-size:13px;color:var(--text-soft);
+  text-align:right;letter-spacing:.05em;
+}
+.voice-stars{color:var(--gold);letter-spacing:3px;font-size:14px}
+
+/* ── ABOUT ── */
+#about{
+  background:var(--bark);
+  padding:72px 22px;
+  position:relative;overflow:hidden;
+}
+#about::before{
+  content:'';position:absolute;
+  top:-40px;right:-40px;
+  width:200px;height:200px;border-radius:50%;
+  border:1px solid rgba(196,166,104,.12);
+  pointer-events:none;
+}
+.about-img{
+  width:100%;aspect-ratio:4/3;
+  overflow:hidden;border-radius:4px;
+  margin-bottom:32px;
+}
+.about-img img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.about-catch{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:clamp(18px,4.5vw,24px);
+  font-weight:600;color:var(--warm-wh);
+  line-height:1.8;margin-bottom:20px;
+}
+.about-p{
+  font-size:16px;color:rgba(255,255,255,.65);
+  line-height:2.1;margin-bottom:16px;
+}
+.about-history{
+  display:flex;align-items:center;gap:14px;
+  margin-top:28px;padding:20px 18px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(196,166,104,.2);
+  border-radius:4px;
+}
+.about-history-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;color:var(--gold);
+  line-height:1;flex-shrink:0;font-style:italic;
+}
+.about-history-text{
+  font-size:15px;color:rgba(255,255,255,.6);
+  line-height:1.8;
+}
+.about-history-text strong{
+  display:block;font-size:17px;
+  color:rgba(255,255,255,.85);margin-bottom:4px;
+}
+
+/* ── FLOW ── */
+#flow{
+  background:var(--ivory);
+  padding:72px 22px;
+}
+.flow-steps{
+  display:flex;flex-direction:column;gap:0;
+  margin-top:36px;position:relative;
+}
+.flow-steps::before{
+  content:'';position:absolute;
+  left:26px;top:26px;bottom:26px;width:1px;
+  background:linear-gradient(to bottom,var(--gold),var(--beige));
+}
+.flow-step{
+  display:flex;gap:20px;
+  padding-bottom:34px;align-items:flex-start;
+}
+.flow-step:last-child{padding-bottom:0}
+.flow-dot{
+  width:52px;height:52px;border-radius:50%;flex-shrink:0;
+  background:var(--warm-wh);
+  border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;color:var(--gold);font-style:italic;
+}
+.flow-body h3{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:18px;font-weight:600;
+  color:var(--deep);margin-bottom:7px;padding-top:12px;
+}
+.flow-body p{
+  font-size:15px;color:var(--text-mid);line-height:2;
+}
+.flow-body .note{
+  display:inline-block;margin-top:8px;
+  font-size:13px;color:var(--earth);
+  background:var(--cream);
+  padding:5px 12px;border-radius:99px;
+}
+
+/* ── MAP & INFO ── */
+#access{
+  background:var(--cream);
+  padding:72px 22px;
+}
+.info-grid{
+  display:flex;flex-direction:column;gap:14px;
+  margin-bottom:32px;
+}
+.info-row{
+  display:grid;grid-template-columns:90px 1fr;
+  gap:14px;align-items:start;
+  padding:16px 0;
+  border-bottom:1px solid var(--beige);
+}
+.info-label{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:14px;font-weight:600;
+  color:var(--earth);letter-spacing:.08em;
+}
+.info-val{
+  font-size:16px;color:var(--text);
+  line-height:1.85;
+}
+.info-val a{color:var(--tel);text-decoration:none;font-size:20px;font-weight:500}
+.map-wrap{
+  width:100%;height:260px;
+  border-radius:4px;overflow:hidden;
+  border:1px solid var(--beige);
+}
+.map-wrap iframe{width:100%;height:100%;border:0}
+
+/* ── SNS ── */
+#sns{
+  background:var(--warm-wh);
+  padding:56px 22px;text-align:center;
+}
+.sns-link{
+  display:inline-flex;align-items:center;gap:12px;
+  background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  color:#fff;text-decoration:none;
+  padding:18px 28px;border-radius:6px;
+  font-size:16px;font-weight:500;letter-spacing:.06em;
+  margin-top:20px;min-height:60px;
+  transition:opacity .2s,transform .2s;
+}
+.sns-link:hover{opacity:.9;transform:translateY(-1px)}
+.sns-link svg{width:26px;height:26px;flex-shrink:0}
+
+/* ── FINAL CTA ── */
+#cta{
+  background:var(--deep);
+  padding:72px 22px;text-align:center;
+  position:relative;overflow:hidden;
+}
+#cta::before{
+  content:'';position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:300px;height:300px;
+  border-radius:50%;
+  border:1px solid rgba(196,166,104,.1);
+  pointer-events:none;
+}
+.cta-catch{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:clamp(18px,5vw,24px);
+  font-weight:600;color:var(--warm-wh);
+  line-height:1.8;margin-bottom:16px;
+}
+.cta-sub{
+  font-size:15px;color:rgba(255,255,255,.55);
+  line-height:2;margin-bottom:40px;
+}
+.cta-btns{
+  display:flex;flex-direction:column;gap:16px;
+  margin-bottom:20px;
+}
+.cta-btn{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:22px 28px;border-radius:4px;
+  font-family:'Noto Serif JP',serif;
+  font-size:18px;font-weight:500;letter-spacing:.06em;
+  text-decoration:none;
+  min-height:68px;
+  transition:transform .2s,box-shadow .2s;
+}
+.cta-btn:active{transform:scale(.98)}
+.cta-btn-tel{
+  background:var(--tel);color:#fff;
+  box-shadow:0 6px 28px rgba(46,95,163,.4);
+}
+.cta-btn-line{
+  background:var(--line);color:#fff;
+  box-shadow:0 6px 28px rgba(6,199,85,.35);
+}
+.cta-btn svg{width:26px;height:26px;flex-shrink:0}
+.cta-note{
+  font-size:14px;color:rgba(255,255,255,.4);
+  line-height:2;letter-spacing:.04em;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--bark);
+  padding:32px 22px 100px; /* 下部ボタンの分の余白 */
+  text-align:center;
+}
+.footer-logo{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  margin-bottom:14px;
+}
+.footer-logo img{height:40px;width:auto;object-fit:contain}
+.footer-name{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:15px;color:rgba(255,255,255,.5);
+  letter-spacing:.1em;
+}
+footer p{
+  font-size:12px;color:rgba(255,255,255,.25);
+  letter-spacing:.06em;
+}
+
+/* ── SECTION HEADING PATTERN ── */
+.sec-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--taupe);display:block;margin-bottom:10px;
+}
+.sec-h{
+  font-family:'Shippori Mincho B1',serif;
+  font-size:clamp(20px,5vw,26px);
+  font-weight:600;line-height:1.65;
+  color:var(--deep);margin-bottom:12px;
+}
+.sec-h-wh{color:var(--warm-wh)}
+.sec-sub{
+  font-size:16px;color:var(--text-mid);
+  line-height:2;margin-bottom:0;
 }
 </style>
 </head>
 <body>
-<nav>
-  <ul class="nav-links">
-    <li><a href="#menu">施術メニュー</a></li>
-    <li><a href="#reasons">院の特徴</a></li>
-    <li><a href="#access">アクセス</a></li>
-    <li><a href="#contact" class="btn-reserve">📅 ご予約</a></li>
-  </ul>
-</nav>
-<section class="hero">
-  <div class="hero-left fade">
-    <h1 class="hero-catch">25年、鹿屋で<br>積み重ねてきた<br>技術と信頼</h1>
-  </div>
-  <div class="hero-right fade">
-    <p class="hero-sub">体の不調を、丁寧に・確実に。<br>あなたに寄り添う整体院</p>
-    <div class="hero-btns">
-      <a href="tel:0000000000" class="btn-outline">📞 電話で予約</a>
-      <a href="https://lin.ee/" class="btn-outline btn-fill">💬 LINEで予約</a>
+
+<!-- ── FIXED BOTTOM BUTTONS ── -->
+<div class="fixed-btns">
+  <a href="tel:090-5381-4613" class="fixed-tel">
+    <svg class="fixed-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    <div>
+      <span class="fixed-btn-top">今すぐ予約</span>
+      <span class="fixed-btn-main">お電話で予約</span>
+      <span class="fixed-btn-sub">090-5381-4613</span>
     </div>
-    <p class="hero-note"> </p>
-  </div>
-</section>
-<div style="width:100%;height:420px;overflow:hidden;" class="fade">
-  <img src="salon1.jpg" alt="サロン内装" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+  </a>
+  <a href="https://lin.ee/XXXXXXX" class="fixed-line" target="_blank" rel="noopener">
+    <svg class="fixed-icon" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.064-.022.134-.032.2-.032.211 0 .391.09.51.25l2.444 3.317V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.630 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    <div>
+      <span class="fixed-btn-top">今すぐ予約</span>
+      <span class="fixed-btn-main">LINEで予約</span>
+      <span class="fixed-btn-sub">24時間受付中</span>
+    </div>
+  </a>
 </div>
-<section class="reasons" id="reasons">
-  <div class="section-label fade"><span class="section-label-sub">ASATOMO SEITAI</span></div>
-  <h2 class="section-title fade">選ばれる3つの理由</h2>
-  <div class="reasons-grid">
-    <div class="reason-card featured fade">
-      <div class="reason-card-img" style="position:relative;">
-        <img src="asatomo3.jpg" alt="完全個室">
-        <span class="reason-badge">PRIVATE</span>
+
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-logo">
+    <img src="asatomo1.jpg" alt="Asatomo ロゴ">
+    <div class="header-logo-text">
+      Asatomo
+     <span style="font-size: 32px; font-weight: bold;">あさとも整体院</span>
+    </div>
+  </div>
+  <a href="tel:090-5381-4613" class="header-tel">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    電話する
+  </a>
+</header>
+
+
+<!-- ══ HERO ══ -->
+<!-- 📷 asatomo6.jpg（施術風景）→ hero-bg に使用。人の温もりを背景に -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-seigaiha"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-gold-line"></div>
+
+  <div class="hero-inner">
+    <span class="hero-accent-line"></span>
+
+    <h1 class="hero-main">
+      朝起きた時の<br>
+      <em>「動けるかも」</em>を、<br>
+      もう一度、あなたに。
+    </h1>
+
+    <p class="hero-sub">
+      25年、鹿屋の皆様と歩んできた整体院。<br>
+      お体の「重さ」と「悩み」、<br>
+      まずはゆっくり聞かせてください。
+    </p>
+
+    <div class="hero-cta-wrap">
+      <a href="tel:090-5381-4613" class="hero-btn hero-btn-tel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        お電話でご予約　090-5381-4613
+      </a>
+      <a href="https://lin.ee/XXXXXXX" class="hero-btn hero-btn-line" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.064-.022.134-.032.2-.032.211 0 .391.09.51.25l2.444 3.317V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.630 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        LINEで予約・ご相談（無料）
+      </a>
+    </div>
+    <p class="hero-trust">無理な勧誘・追加費用は一切ありません</p>
+  </div>
+</section>
+
+
+<!-- ══ INTRO ══ -->
+<section id="intro">
+  <div class="inner">
+    <span class="sec-label reveal">Welcome</span>
+    <h2 class="sec-h reveal d1">「痛い」「重い」「疲れた」<br>その気持ち、よく分かります。</h2>
+
+    <div class="wa-rule reveal d2"><div class="wa-rule-dot"></div></div>
+
+    <p class="intro-p reveal d2">
+      年齢を重ねると、朝起きた時の「体の重さ」が気になり始めます。肩こりや腰の痛みが続いて、「これはもう仕方ない」と諦めていませんか？
+    </p>
+    <p class="intro-p reveal d3">
+      Asatomoは、鹿屋市でこの25年間、そんなお悩みを抱えた方々と向き合い続けてきました。医療機関ではなく「身近なかかりつけ」として、お体の変化を一緒に見守ります。
+    </p>
+
+    <div class="intro-note reveal">
+      <strong>ご安心ください</strong><br>
+      「何回通わないといけない」などの押し付けは一切ありません。1回だけのご来院も大歓迎です。まずお話を聞かせてください。
+    </div>
+  </div>
+
+  <!-- 📷 asatomo7.jpg + asatomo3.jpg → 院内の雰囲気を2枚並べて信頼感を演出 -->
+  <div class="photo-strip" style="margin-top:48px">
+    <div class="photo-strip-item">
+      <img src="asatomo7.jpg" alt="院内の様子" loading="lazy">
+    </div>
+    <div class="photo-strip-item">
+      <img src="asatomo3.jpg" alt="施術室の様子" loading="lazy">
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ CONCERNS ══ -->
+<section id="concerns">
+  <div class="inner">
+    <span class="sec-label reveal">Your Concerns</span>
+    <h2 class="sec-h reveal d1">このようなお悩み<br>ありませんか？</h2>
+    <p class="sec-sub reveal d2">当院にご来院される方のよくあるお悩みです。</p>
+
+    <div class="concern-list" style="margin-top:32px">
+      <div class="concern-item reveal">
+        <div class="concern-icon">🌅</div>
+        <div class="concern-body">
+          <h3>朝、体が重くて起き上がれない</h3>
+          <p>目が覚めても体が言うことを聞かない。「歳だから仕方ない」と感じていませんか？</p>
+        </div>
       </div>
-      <div class="reason-body">
-        <h3 class="reason-title">完全個室</h3>
-        <p class="reason-sub">プライベートな空間で</p>
-        <p class="reason-desc">他の患者様と顔を合わせることなく、完全な個室で施術を受けていただきます。プライバシーをしっかり守り、リラックスして体を預けられる空間です。</p>
+      <div class="concern-item reveal d1">
+        <div class="concern-icon">💆</div>
+        <div class="concern-body">
+          <h3>肩こり・首こりが慢性化している</h3>
+          <p>マッサージに行っても次の日にはまた重くなる。その場しのぎを繰り返している。</p>
+        </div>
+      </div>
+      <div class="concern-item reveal d2">
+        <div class="concern-icon">🚶</div>
+        <div class="concern-body">
+          <h3>腰が痛くて長く歩けない</h3>
+          <p>家事や買い物の途中で腰が痛くなり、休みながら動いている。</p>
+        </div>
+      </div>
+      <div class="concern-item reveal d3">
+        <div class="concern-icon">😴</div>
+        <div class="concern-body">
+          <h3>疲れが抜けず、眠りが浅い</h3>
+          <p>寝ても疲れが取れない。体が緊張したまま朝を迎えてしまう。</p>
+        </div>
+      </div>
+      <div class="concern-item reveal">
+        <div class="concern-icon">🦵</div>
+        <div class="concern-body">
+          <h3>膝や股関節がだるい・痛い</h3>
+          <p>階段の上り下りが辛くなってきた。外出が億劫になってきている。</p>
+        </div>
       </div>
     </div>
-    <div class="reason-card fade">
-      <div class="reason-card-img" style="position:relative;">
-        <img src="asatomo4.jpg" alt="25年の実績">
-        <span class="reason-badge">25th</span>
-      </div>
-      <div class="reason-body">
-        <h3 class="reason-title">25年の実績</h3>
-        <p class="reason-sub">鹿屋で培われた信頼</p>
-        <p class="reason-desc">2001年の開業以来、鹿屋の皆様に支えられて25年。肩こり、腰痛、体の不調など、様々な症状に対応してきた実績が安心の証です。</p>
-      </div>
+
+    <div class="concern-note reveal">
+      <p><strong>「これくらいで行っていいのかな…」</strong><br>そのお気持ちで大丈夫です。<br>気になることは何でもお話しください。</p>
     </div>
-    <div class="reason-card fade">
-      <div class="reason-card-img" style="position:relative;">
-        <img src="asatomo5.jpg" alt="丁寧なカウンセリング">
-        <span class="reason-badge">CARE</span>
+  </div>
+</section>
+
+
+<!-- ══ WHY ══ -->
+<section id="why">
+  <div class="inner">
+    <span class="sec-label reveal">Why Asatomo</span>
+    <h2 class="sec-h reveal d1">25年選ばれ続ける<br>4つの理由</h2>
+
+    <div class="wa-rule reveal d2"><div class="wa-rule-dot"></div></div>
+
+    <div class="why-feature">
+      <div class="why-item reveal">
+        <div class="why-num cormorant">01</div>
+        <div class="why-h">「話を聞いてもらえる」<br>丁寧なカウンセリング</div>
+        <p class="why-p">初めてのご来院は、施術前に十分なお時間をかけてお体の状態をお伺いします。「こんなこと聞いていいの？」はありません。何でもお話しください。</p>
       </div>
-      <div class="reason-body">
-        <h3 class="reason-title">丁寧なカウンセリング</h3>
-        <p class="reason-sub">あなたの体を知る</p>
-        <p class="reason-desc">施術前にじっくりとお話を伺い、体の状態や生活習慣を把握。痛みの原因を一緒に探り、一人ひとりに合った施術プランをご提案します。</p>
+
+      <div class="why-item reveal d1">
+        <div class="why-num cormorant">02</div>
+        <div class="why-h">「痛くない」やさしい施術</div>
+        <p class="why-p">「整体は痛いもの」というイメージをお持ちの方も多いですが、当院の施術は無理のない力加減が基本。施術中にいつでも「痛い」「やめてほしい」と言っていただけます。</p>
+      </div>
+
+      <div class="why-item reveal d2">
+        <div class="why-num cormorant">03</div>
+        <div class="why-h">完全予約制・ゆったり個室</div>
+        <p class="why-p">待合室で他の方と顔を合わせる心配はありません。ご予約の方だけをお迎えする完全個室。ゆっくりと落ち着いた時間をお過ごしいただけます。</p>
+      </div>
+
+      <div class="why-item reveal d3">
+        <div class="why-num cormorant">04</div>
+        <div class="why-h">「何度来ても安心」<br>追加費用・勧誘ゼロ</div>
+        <p class="why-p">「コースを買わないといけない」「毎週来なさい」といった押し付けは一切ありません。ご自身のペースで、必要な時にご来院ください。</p>
       </div>
     </div>
   </div>
 </section>
-<section id="menu">
-  <h2 class="section-title fade">メニューと料金</h2>
-  <p class="fade" style="font-size:14px;color:var(--text-light);margin-top:-40px;margin-bottom:40px;">都度払い・回数券で、無理のない通院を。あなたのライフスタイルに合わせて、お選びいただけます。</p>
-  <div class="menu-grid">
-    <div class="menu-card fade">
-      <div class="menu-card-body">
-        <div class="menu-tags"><span class="menu-tag">8,000円</span><span class="menu-tag">60分</span></div>
-        <h3 class="menu-title">整体施術（都度払い）</h3>
-        <p class="menu-desc">初めての方でも安心してご利用いただける都度払い施術。体の状態を確認し、丁寧に施術いたします。</p>
+
+
+<!-- ══ PRICE ══ -->
+<section id="price">
+  <div class="inner">
+    <span class="sec-label reveal">Menu & Price</span>
+    <h2 class="sec-h reveal d1">料金メニュー</h2>
+    <p class="sec-sub reveal d2">すべて税込み。追加料金は発生しません。</p>
+
+    <!-- 📷 asatomo4.jpg → 料金セクションのビジュアルに。明るく清潔感のある写真を選定 -->
+    <div class="price-hero-img reveal d3">
+      <img src="asatomo4.jpg" alt="施術の様子" loading="lazy">
+    </div>
+
+    <div class="price-list">
+      <div class="price-card reveal">
+        <div>
+          <div class="price-name">初回体験コース</div>
+          <div class="price-desc">カウンセリング込み・60分</div>
+        </div>
+        <div class="price-amount">¥5,500<small>（税込）</small></div>
+      </div>
+      <div class="price-card reveal d1">
+        <div>
+          <div class="price-name">全身調整コース</div>
+          <div class="price-desc">肩・腰・全体バランス調整・60分</div>
+        </div>
+        <div class="price-amount">¥7,700<small>（税込）</small></div>
+      </div>
+      <div class="price-card reveal d2">
+        <div>
+          <div class="price-name">集中ケアコース</div>
+          <div class="price-desc">気になる部位に集中・90分</div>
+        </div>
+        <div class="price-amount">¥11,000<small>（税込）</small></div>
       </div>
     </div>
-    <div class="menu-card fade">
-      <div class="menu-card-body">
-        <div class="menu-tags"><span class="menu-tag">90,000円</span><span class="menu-tag">60分×12回</span></div>
-        <h3 class="menu-title">回数券（12回）</h3>
-        <p class="menu-desc">1回あたり7,500円とお得な回数券。継続的なケアで体の不調を根本から改善していきたい方に。</p>
-      </div>
-    </div>
-    <div class="menu-card fade">
-      <div class="menu-card-body">
-        <div class="menu-tags"><span class="menu-tag">140,000円</span><span class="menu-tag">60分×20回</span></div>
-        <h3 class="menu-title">回数券（20回）</h3>
-        <p class="menu-desc">1回あたり7,000円で最もお得な回数券。定期的なメンテナンスで健やかな体を保ちたい方に。</p>
-      </div>
-    </div>
-  </div>
-  <div class="payment-box fade">
-    <span style="font-size:20px;">💳</span>
-    <span>お支払い方法：現金 / PayPay / 各種クレジットカード</span>
+    <p class="price-note reveal">※当日、コース変更のご相談も承ります。<br>「どれを選べばいいか分からない」もお気軽にどうぞ。</p>
   </div>
 </section>
-<div class="story">
-  <div class="story-left fade">
-    <h2 class="story-title">鹿屋で、あなたの隣に</h2>
-    <p class="story-desc">2001年から鹿屋の皆様に支えられ、25年の歳月を歩んでまいりました。肩こり、腰痛、体の不調に悩む方々の「らしさ」を取り戻すお手伝いを、これからも続けていきます。</p>
-    <div class="story-num">25</div>
-    <p class="story-num-label">年の実績と信頼</p>
-    <a href="#contact" class="btn-outline" style="color:var(--white);border-color:rgba(255,255,255,0.4);display:inline-flex;">📞 ご予約・お問い合わせ</a>
+
+
+<!-- ══ VOICE ══ -->
+<section id="voice">
+  <div class="inner">
+    <span class="sec-label reveal">Voice</span>
+    <h2 class="sec-h reveal d1">通ってくださっている方の<br>声をご紹介します</h2>
+
+    <div class="voice-cards">
+      <div class="voice-card reveal">
+        <p class="voice-text">長年の肩こりがつらくて来院しましたが、施術後に首がすっと軽くなって驚きました。先生が丁寧に話を聞いてくださるので、毎回安心して来られます。</p>
+        <div class="voice-meta">
+          <span class="voice-stars">★★★★★</span><br>
+          50代・女性 / 鹿屋市在住
+        </div>
+      </div>
+      <div class="voice-card reveal d1">
+        <p class="voice-text">整体は怖いイメージがあったのですが、ここは全然痛くないし、無理に通わせようとしないのがとても信頼できます。腰が軽くなって家事が楽になりました。</p>
+        <div class="voice-meta">
+          <span class="voice-stars">★★★★★</span><br>
+          60代・女性 / 鹿屋市在住
+        </div>
+      </div>
+      <div class="voice-card reveal d2">
+        <p class="voice-text">母と一緒に通っています。院内が清潔で落ち着いた雰囲気なので、母も安心して通えています。「また来たい」と言っているので、娘としてもうれしいです。</p>
+        <div class="voice-meta">
+          <span class="voice-stars">★★★★★</span><br>
+          40代・女性（母は70代）/ 鹿屋市在住
+        </div>
+      </div>
+    </div>
   </div>
+</section>
+
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="inner">
+    <span class="sec-label reveal" style="color:rgba(255,255,255,.35)">About</span>
+    <h2 class="sec-h sec-h-wh reveal d1">鹿屋で25年、<br>皆さんのそばにいます。</h2>
+
+    <!-- 📷 asatomo3.jpg または asatomo7.jpg → 院内写真をダークセクションに -->
+    <div class="about-img reveal d2">
+      <img src="asatomo3.jpg" alt="院内の様子" loading="lazy">
+    </div>
+
+    <p class="about-p reveal d3">
+      Asatomoは2001年に鹿屋市にて開院し、以来25年間、地域の皆様のお体と向き合い続けてきました。
+    </p>
+    <p class="about-p reveal">
+      「病院に行くほどではないけれど、なんとなく体が重い」——そんな日常の不調を抱えた方が、気軽に立ち寄れる場所でありたいと思っています。
+    </p>
+
+    <div class="about-history reveal">
+      <div class="about-history-num cormorant">25</div>
+      <div class="about-history-text">
+        <strong>年の歴史と実績</strong>
+        2001年開院。鹿屋市・大隅エリアで<br>
+        長年ご愛顧いただいています。
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FLOW ══ -->
+<section id="flow">
+  <div class="inner">
+    <span class="sec-label reveal">Flow</span>
+    <h2 class="sec-h reveal d1">初めてのご来院の流れ</h2>
+    <p class="sec-sub reveal d2">緊張しなくて大丈夫。ゆっくりお迎えします。</p>
+
+    <div class="flow-steps">
+      <div class="flow-step reveal">
+        <div class="flow-dot cormorant">1</div>
+        <div class="flow-body">
+          <h3>お電話 or LINEでご予約</h3>
+          <p>お名前・ご希望日時・簡単なお悩みをお知らせください。「LINEで何を書けばいいか分からない」という方はお電話でどうぞ。</p>
+          <span class="note">📞 090-5381-4613</span>
+          <div style="margin-top:10px;padding:14px 16px;background:rgba(6,199,85,.07);border-radius:6px;border:1px solid rgba(6,199,85,.18);">
+            <p style="font-size:15px;color:var(--deep);line-height:1.8;margin:0;">
+              💬 <strong>LINEはスタンプ一つでもOKです</strong><br>
+              <span style="font-size:13px;color:var(--text-soft);">「よろしくお願いします」のスタンプを送るだけで、こちらから日程をご案内します。文章が苦手な方もご安心ください。</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step reveal d1">
+        <div class="flow-dot cormorant">2</div>
+        <div class="flow-body">
+          <h3>ご来院・カウンセリング</h3>
+          <p>まずゆっくりとお話を伺います。いつから・どのあたりが・どんな感じか、など。思い当たることは何でも教えてください。</p>
+          <span class="note">⏱ 初回はカウンセリング込みで約60〜70分</span>
+        </div>
+      </div>
+      <div class="flow-step reveal d2">
+        <div class="flow-dot cormorant">3</div>
+        <div class="flow-body">
+          <h3>施術</h3>
+          <p>体の状態に合わせた施術を行います。痛みを感じたり、途中でやめたい場合はいつでもお申し付けください。</p>
+          <span class="note">✨ 施術後、体が軽くなったと感じる方が多いです</span>
+        </div>
+      </div>
+      <div class="flow-step reveal d3">
+        <div class="flow-dot cormorant">4</div>
+        <div class="flow-body">
+          <h3>アドバイス・ご精算</h3>
+          <p>施術後、日常生活でのセルフケアのアドバイスをお伝えします。次回のご予約は任意です。無理にすすめることはありません。</p>
+          <span class="note">💰 追加費用は一切発生しません</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ ACCESS ══ -->
+<section id="access">
+  <div class="inner">
+    <span class="sec-label reveal">Access</span>
+    <h2 class="sec-h reveal d1">アクセス・診療情報</h2>
+
+    <div class="info-grid reveal d2">
+      <div class="info-row">
+        <div class="info-label">院名</div>
+        <div class="info-val">Asatomo（あさとも）整体院</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">所在地</div>
+        <div class="info-val">鹿児島県鹿屋市上谷町8-33　101<br></div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">電話</div>
+        <div class="info-val"><a href="tel:090-5381-4613">090-5381-4613</a></div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">受付時間</div>
+        <div class="info-val">9:00 〜 18:00<br>（完全予約制）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">定休日</div>
+        <div class="info-val">不定休（LINEでご確認ください）</div>
+      </div>
+    <div class="map-wrap reveal d3">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13623.077869620114!2d130.8501135629751!3d31.392919520508507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e91774a9a067d%3A0xedcdf3836b2724c5!2z44Oq44Op44Kv44K844O844K344On44OzIOaVtOS9k-mZoiBBc2F0b21v44Cc44GC44GV44Go44KC!5e0!3m2!1sja!2sjp!4v1780555524470!5m2!1sja!2sjp" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
 </div>
-<section class="insta">
-  <div class="section-label fade"><span class="section-label-sub">INSTAGRAM</span></div>
-  <h2 class="section-title fade">院の日常と雰囲気</h2>
-  <p class="insta-desc fade">Instagramで、Asatomo整体院の日常や院内の雰囲気を発信しています。施術の様子や、院のこだわりをご覧ください。</p>
-  <div class="insta-grid fade"></div>
-  <a href="https://www.instagram.com/asatomo20010504" target="_blank" class="btn-outline fade" style="display:inline-flex;">📷 Instagramをフォロー @asatomo20010504</a>
-</section>
-<section class="access" id="access">
-  <div class="section-label fade"><span class="section-label-sub">ACCESS</span></div>
-  <h2 class="section-title fade">アクセス</h2>
-  <div class="access-inner">
-    <div class="access-info fade">
-      <div>
-        <h3>整体院 Asatomo（あさとも）</h3>
-        <p>鹿屋市<br>SINCE 2001</p>
+
+    <!-- 駐車場・アクセス安心バナー -->
+    <div class="reveal" style="margin-top:18px;display:flex;flex-direction:column;gap:10px;">
+      <div style="
+        background:var(--warm-wh);
+        border:1px solid var(--beige);
+        border-radius:6px;
+        padding:18px 20px;
+        display:flex;align-items:center;gap:16px;
+      ">
+        <span style="font-size:28px;flex-shrink:0;">🅿️</span>
+        <div>
+          <p style="font-family:'Shippori Mincho B1',serif;font-size:16px;font-weight:600;color:var(--deep);margin-bottom:4px;">駐車場完備</p>
+          <p style="font-size:14px;color:var(--text-mid);line-height:1.7;">お車でお越しいただけます。院前に駐車スペースをご用意しています。お気軽にお越しください。</p>
+        </div>
       </div>
-      <div>
-        <h3>営業時間</h3>
-        <p>お問い合わせください</p>
+      <div style="
+        background:var(--warm-wh);
+        border:1px solid var(--beige);
+        border-radius:6px;
+        padding:18px 20px;
+        display:flex;align-items:center;gap:16px;
+      ">
+        <span style="font-size:28px;flex-shrink:0;">🏠</span>
+        <div>
+          <p style="font-family:'Shippori Mincho B1',serif;font-size:16px;font-weight:600;color:var(--deep);margin-bottom:4px;">鹿屋市内からすぐ</p>
+          <p style="font-size:14px;color:var(--text-mid);line-height:1.7;">鹿屋市内からお車で約10分。大隅エリアからも通いやすい場所にあります。</p>
+        </div>
       </div>
-      <div>
-        <h3>ご予約・お問い合わせ</h3>
-        <p>お電話またはLINEにてお気軽にどうぞ。<br>初めての方も安心してご連絡ください。</p>
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="tel:0000000000" class="btn-outline">📞 電話で予約</a>
-        <a href="https://lin.ee/" class="btn-outline btn-fill">💬 LINEで予約</a>
-      </div>
-    </div>
-    <div class="map-wrap fade">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1702.9033802234474!2d130.84276549116137!3d31.391891395577368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e91774a9a067d%3A0xedcdf3836b2724c5!2z44Oq44Op44Kv44K844O844K344On44OzIOaVtOS9k-mZoiBBc2F0b21v44Cc44GC44GV44Go44KC!5e0!3m2!1sja!2sjp!4v1780174504169!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
-<footer id="contact">
-  <span class="footer-logo">
-  </span>
-  <p>整体院 Asatomo（あさとも）｜鹿屋市 ｜ SINCE 2001</p>
-  <div class="footer-links">
-    <a href="https://www.instagram.com/asatomo20010504" target="_blank">Instagram</a>
+
+
+<!-- ══ SNS ══ -->
+<section id="sns">
+  <div class="inner">
+    <span class="sec-label reveal">Instagram</span>
+    <h2 class="sec-h reveal d1" style="margin-bottom:8px">日々の様子を<br>Instagramで発信中</h2>
+    <p class="sec-sub reveal d2">施術の様子・院内情報・健康豆知識など。<br>気軽にフォローしてください。</p>
+    <div class="reveal d3">
+      <a href="https://www.instagram.com/asatomo20010504" class="sns-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        @asatomo20010504 をフォローする
+      </a>
+    </div>
   </div>
-  <p style="margin-top:16px;font-size:12px;">© 2026 Asatomo Seitai. All rights reserved.</p>
+</section>
+
+
+<!-- ══ FINAL CTA ══ -->
+<section id="cta">
+  <div class="inner">
+    <span class="sec-label reveal" style="color:rgba(255,255,255,.35)">Reservation</span>
+    <h2 class="cta-catch reveal d1">
+      「まずは話だけ聞いてみたい」<br>
+      それで十分です。
+    </h2>
+    <p class="cta-sub reveal d2">
+      電話でもLINEでも、気軽にご連絡ください。<br>
+      無理な勧誘は一切ありません。
+    </p>
+
+    <div class="cta-btns reveal d3">
+      <a href="tel:090-5381-4613" class="cta-btn cta-btn-tel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        お電話　090-5381-4613
+      </a>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.8067612196546!2d130.84125817523375!3d31.391891374272998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e91774a9a067d%3A0xedcdf3836b2724c5!2z44Oq44Op44Kv44K844O844K344On44OzIOaVtOS9k-mZoiBBc2F0b21v44Cc44GC44GV44Go44KC!5e0!3m2!1sja!2sus!4v1780554550376!5m2!1sja!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"/></svg>
+        LINEで予約・相談（24時間OK）
+      </a>
+    </div>
+    <p class="cta-note reveal">完全予約制 · 無理な勧誘なし · 1回のみのご来院も歓迎</p>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-logo">
+    <img src="asatomo1.jpg" alt="Asatomo ロゴ">
+    <span class="footer-name">Asatomo 整体院</span>
+  </div>
+  <p>〒 鹿児島県鹿屋市　TEL: 090-5381-4613</p>
+  <p style="margin-top:8px">© 2025 Asatomo 整体院 All Rights Reserved</p>
 </footer>
+
+
 <script>
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 80);
-    }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+// スクロールリビール
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+}, { threshold: 0.08, rootMargin: '0px 0px -28px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
